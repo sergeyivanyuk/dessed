@@ -1,0 +1,275 @@
+    :root {
+    --white: #ffffff;
+    --yellow: #FFD700;
+    --blue: #0066CC;
+    --black: #000000;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+} 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .about-carousel {
+            position: relative;
+            width: 100%;
+            height: 91vh;
+            min-height: 600px;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .carousel-container {
+            display: flex;
+            width: 800%;
+            height: 100%;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel-slide {
+            position: relative;
+            width: 12.5%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Оверлей для затемнения */
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg, 
+                rgba(0, 0, 0, 0.7) 0%, 
+                rgba(0, 0, 0, 0.5) 50%, 
+                rgba(0, 0, 0, 0.7) 100%
+            );
+            z-index: 1;
+        }
+        
+
+        .slide-content {
+            
+            position: relative;
+            z-index: 2;
+            color: --light-bg;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .slide-content .h4 {
+            color: #ffffff;
+        }
+
+        .slide-title {
+            color: #ffffff;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-description {
+            color: #ffffff;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease 0.2s;
+        }
+
+        .slide-active .slide-title,
+        .slide-active .slide-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 90%;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d5d5d5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .nav-dot.active {
+            background: #797979;
+            transform: scale(1.3);
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 86%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 3;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       
+
+        .nav-arrow.prev {
+            left: 30px;
+        }
+
+        .nav-arrow.next {
+            right: 30px;
+           animation: 1s linear 0s infinite alternate nextArrowAnimation;
+        }
+
+        @keyframes nextArrowAnimation {
+            from {
+                transform: translateY(-50%) scale(1);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            to {
+                 background: rgba(255, 255, 255, 0.021);
+                 transform: translateY(-50%) scale(1.1);
+            }
+        }
+         .nav-arrow:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+            animation: none;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: 90px;
+            right: 30px;
+            color: white;
+            font-size: 1.1rem;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .about-carousel {
+                height: 80vh;
+            }
+
+            .slide-title {
+                font-size: 2rem;
+            }
+            
+            .slide-description {
+                font-size: 1.1rem;
+            }
+            
+            .nav-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .nav-arrow.prev {
+                left: 15px;
+            }
+            
+            .nav-arrow.next {
+                right: 15px;
+            }
+            
+            .carousel-nav {
+                gap: 8px;
+            }
+            
+            .nav-dot {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        /* Индикатор загрузки */
+        .loading {
+            position: static;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 4;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: #0059a4;
+            width: 0%;
+            transition: width 3s linear;
+        }
+
+        .auto-play-active .loading-progress {
+            width: 100%;
+        }
+
+        /* Стили для инструкции */
+        .instructions {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            z-index: 3;
+            max-width: 300px;
+        }
+
+        .instructions h3 {
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .instructions ul {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }

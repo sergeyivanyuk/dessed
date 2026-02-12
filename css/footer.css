@@ -1,0 +1,205 @@
+/* Стили для футера */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #1a2530);
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffbb09;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+h10 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffbb09;
+}
+
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #ffbb09;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ffbb09;
+}
+
+/* Стили для карты партнёра - теперь в строку */
+.partner-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 350px;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.partner-card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.partner-card li {
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    flex: 1 1 calc(50% - 15px);
+    min-width: 150px;
+}
+
+.partner-card li:hover {
+    background: rgba(255, 187, 9, 0.1);
+    border-color: #ffbb09;
+}
+
+.partner-card .label {
+    font-weight: 600;
+    color: #ffbb09;
+    margin-right: 8px;
+}
+
+.partner-card .value {
+    opacity: 0.9;
+}
+
+/* Горизонтальное расположение контактов */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-icon {
+    color: #ffbb09;
+    font-weight: bold;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .footer-main {
+        gap: 30px;
+    }
+    
+    .partner-card {
+        flex: 0 1 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+    }
+    
+    .partner-card {
+        flex: 1 1 100%;
+    }
+    
+    .partner-card li {
+        flex: 1 1 100%;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-card .label {
+        min-width: 80px;
+    }
+    
+    .footer-logo {
+        font-size: 2rem;
+    }
+    
+    .partner-card li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
