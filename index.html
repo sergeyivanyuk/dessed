@@ -42,11 +42,12 @@
 </head>
 <body class="">
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="./images/ЛОГОТИП.png" alt="DESSED" style="height: 60px;">
+        <div class="container header-container">
+            <div class="logo">
+                    <img src="./images/ЛОГОТИП.png" alt="DESSED">
                 </div>
+            <nav>
+                
                 
                 <!-- Десктопная навигация -->
                 <div class="nav-buttons">
@@ -55,6 +56,8 @@
                     <a href="#projects" class="nav-button">Наши проекты</a>
                     <a href="#location" class="nav-button">Контакты</a>
                 </div>
+
+             
                 
                 <!-- Кнопка мобильного меню -->
                 <button class="menu-toggle">
@@ -63,6 +66,16 @@
                     <span></span>
                 </button>
             </nav>
+               <div class="header-contacts">
+                <a href="tel:89278185535" class="header-contact">
+                    <i class="fas fa-phone header-icon"></i>
+                    <span>+7 (927) 818-55-35</span>
+                </a>
+                <a href="mailto:dessed.d@yandex.ru" class="header-contact">
+                    <i class="fas fa-envelope header-icon"></i>
+                   <span> dessed.d@yandex.ru</span>
+                </a>
+                </div>
         </div>
         
         <!-- Мобильная шторка -->
@@ -132,7 +145,14 @@
             <div class="carousel-container">
                 <!-- Слайд 1 -->
                 <div class="carousel-slide slide-active">
-                    <img src="./images/present.JPG" class="slide-image" aria-label="Картинка слайдера"> 
+                     <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
+                        <source src="./videos/IMG_5071.MP4" type="video/mp4">
+                        <source src="./videos/IMG_5071.webm" type="video/webm">
+                        <source src="./videos/IMG_5072.MP4" type="video/mp4">
+                        <source src="./videos/IMG_5072.webm" type="video/webm">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <!-- <img src="./images/present.JPG" class="slide-image" aria-label="Картинка слайдера">  -->
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <h2 class="slide-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
@@ -145,7 +165,14 @@
 
                 <!-- Слайд 2 -->
                 <div class="carousel-slide">
-                    <img src="./images/IMG_4991.JPG" class="slide-image" aria-label="Картинка слайдера">
+                      <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
+                        <source src="./videos/IMG_8921.mp4" type="video/mp4">
+                        <source src="./videos/IMG_8921.webm" type="video/webm">
+                        <!-- <source src="./videos/IMG_5072.MP4" type="video/mp4">
+                        <source src="./videos/IMG_5072.webm" type="video/webm"> -->
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <!-- <img src="./images/IMG_4991.JPG" class="slide-image" aria-label="Картинка слайдера"> -->
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <p class="slide-description">
@@ -159,7 +186,14 @@
 
                 <!-- Слайд 3 -->
                 <div class="carousel-slide">
-                    <img src="./images/photo_2024-11-27_12-20-01.jpg" class="slide-image" aria-label="Картинка слайдера">
+                      <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
+                        <source src="./videos/сборка щитов (ящики).MOV" type="video/mp4">
+                        <!-- <source src="./videos/дерево-.MOV" type="video/mp4"> -->
+                        <!-- <source src="./videos/Деревообработка (процесс сборки щитов).MOV" type="video/mp4"> -->
+                        <!-- <source src="./videos/IMG_5072.webm" type="video/webm"> -->
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <!-- <img src="./images/photo_2024-11-27_12-20-01.jpg" class="slide-image" aria-label="Картинка слайдера"> -->
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <p class="slide-description">
@@ -309,10 +343,10 @@
                         </div>
                         <div class="service-card" style="cursor: pointer; transition: 0.3s;">
                             <div class="service-image">
-                                <img src="./images/services/электроэрозионная обработка.jpg" alt="Электроэрозийная обработка" aria-label="Картинка услуг">
+                                <img src="./images/services/электроэрозионная обработка.jpg" alt="Электроэрозионная обработка" aria-label="Картинка услуг">
                             </div>
                             <div class="service-content">
-                                <h3>Электроэрозийная обработка</h3>
+                                <h3>Электроэрозионная обработка</h3>
                                 
                             </div>
                         </div>
@@ -327,7 +361,7 @@
                         </div>
                          <div class="service-card" style="cursor: pointer; transition: 0.3s;">
                             <div class="service-image">
-                                <img src="./images/services/шлифовальне работы.jpg" alt="Полировка металла" aria-label="Картинка услуг">
+                                <img src="./images/projects/Шлифовальные работы, полировка.jpg" alt="Полировка металла" aria-label="Картинка услуг">
                             </div>
                             <div class="service-content">
                                 <h3>Полировка металла</h3>
@@ -373,6 +407,15 @@
                                 
                             </div>
                         </div>
+                          <div class="service-card" style="cursor: pointer; transition: 0.3s;">
+                            <div class="service-image">
+                                <img src="./images/services/разработка констуркторской документации.png" alt="Услуги по разработке конструкторской документации">
+                            </div>
+                            <div class="service-content">
+                                <h3>Услуги по разработке конструкторской документации</h3>
+                                
+                            </div>
+                        </div>
                        
                     </div>
                 </div>
@@ -388,6 +431,25 @@
                     превосходное качество и индивидуальный подход к каждому заказу.
                 </p>
                 <div class="projects-container">
+                    <div class="projects-item">
+                    <img src="./images/projects/1.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+                 <div class="projects-item">
+                    <img src="./images/projects/2.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+                 <div class="projects-item">
+                    <img src="./images/projects/3.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+                 <div class="projects-item">
+                    <img src="./images/projects/4.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+                 <div class="projects-item">
+                    <img src="./images/projects/5.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+                 <div class="projects-item">
+                    <img src="./images/projects/6.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
+                 </div>
+
                  <div class="projects-item">
                     <img src="./images/projects/внутренности ящиков.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
                  </div>
@@ -564,7 +626,9 @@
             <div class="map-frame">
                 
                 <div class="map-inner">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff2fba8ce11656f15192ba9a18bbdb5bee9ccd9470ccc078bb1affa81effe9af&amp;source=constructor" frameborder="0" allowfullscreen="true"></iframe>
+                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4ef1db719e3c1300ae5d797ebbb5f937ce822b293e138691e0955046209dbce&amp;source=constructor" allowfullscreen frameborder="0"></iframe>
+                    <!-- <a href="https://yandex.ru/maps/?um=constructor%3A9fe9955c623fde6746f5661b1209bcc40950fb70bb2fc05957545c77e4d0e38d&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A9fe9955c623fde6746f5661b1209bcc40950fb70bb2fc05957545c77e4d0e38d&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a> -->
+                   <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9fe9955c623fde6746f5661b1209bcc40950fb70bb2fc05957545c77e4d0e38d&amp;source=constructor" allowfullscreen frameborder="0"></iframe> -->
                 </div>
                 
                 
@@ -626,7 +690,7 @@
                             </li>
                             <li>
                                 <span class="label">Телефон</span>
-                                <span class="value">+7 (927) 818 55-35</span>
+                                <span class="value">+7-927-817-55-35</span>
                             </li>
                             <li>
                                 <span class="label">Email</span>

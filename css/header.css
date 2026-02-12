@@ -15,7 +15,7 @@
     font-weight: 500;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -51,6 +51,12 @@ header.scrolled {
 header.scrolled .logo img {
     height: 50px;
     transition: height 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Кнопка меню для мобильных */
@@ -224,7 +230,24 @@ header.scrolled .logo img {
     margin-bottom: 10px;
     font-size: 14px;
 }
-
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-contact {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #0059a4;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color .3s ease-in;
+}
+.header-contact:hover, .header-contact:focus {
+    color: #00182c;
+}
 .contact-item i {
     margin-right: 10px;
     width: 16px;
@@ -249,7 +272,30 @@ header.scrolled .logo img {
 .menu-open .mobile-nav-button:nth-child(4) { transition-delay: 0.4s; }
 
 /* Адаптивность */
+
+@media  (max-width: 1200px) {
+    .header-contact {
+    font-size: 16px;
+}
+.nav-button {
+    padding: 6px 12px;
+}
+.nav-buttons {
+    gap: 10px;
+}
+}
+@media (max-width: 992px) {
+    .header-contacts {
+        gap: 10px;
+    }
+    .header-contact {
+        font-size:  14px;
+    }
+}
 @media (max-width: 768px) {
+        .header-contacts {
+       display: none;
+    }
     .nav-buttons {
         display: none;
     }

@@ -89,6 +89,8 @@
         .slide-description {
             color: #ffffff;
             font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
             line-height: 1.6;
             opacity: 0;
             transform: translateY(30px);
