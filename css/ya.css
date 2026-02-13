@@ -78,6 +78,9 @@
     overflow: hidden;
     border-radius: 0 0 20px 20px;
 }
+.map-container h2 {
+    margin-bottom: 30px;
+}
 
 .map-frame {
     position: relative;
@@ -276,6 +279,12 @@
         width: 45px;
         height: 45px;
         font-size: 18px;
+    }
+    .map-inner {
+        height: 55vh;
+    }
+    .contact {
+            padding: 0 10px;
     }
 }
 

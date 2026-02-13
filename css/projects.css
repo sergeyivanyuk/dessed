@@ -60,10 +60,18 @@
     .projects-container  {
         grid-template-columns:1fr;
         gap: 15px;
+        padding-top: 0;
     }
        .projects-item {
         width: 100%;
         margin: 15px 0;
         height: 48vh;
+    }
+    .projects-item:nth-child(1) {
+        margin-top: 0;
+    }
+    .description {
+        margin-top: 15px;
+        font-size: 16px;
     }
 }

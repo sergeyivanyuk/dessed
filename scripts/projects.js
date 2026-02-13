@@ -12,4 +12,7 @@
                     box[i].style.display = "block";
                 }
             }
+            if (countD >= 41){
+                btn.style.display = 'none'
+            }
         })

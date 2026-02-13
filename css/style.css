@@ -292,6 +292,9 @@ footer {
 .footer-info p {
     margin-bottom: 15px;
 }
+footer .value .modal-link:focus, footer .value .modal-link:hover{
+    color: #FFD700;
+}
 
 .copyright {
     margin-top: 25px;

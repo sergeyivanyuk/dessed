@@ -205,6 +205,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
 }
 
 .modal-features li::before {
@@ -225,6 +226,12 @@
 
 .modal-features li:hover::before {
     left: 100%;
+}
+.modal-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .3s ease-in;
+
 }
 
 .modal-contact {
