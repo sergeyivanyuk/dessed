@@ -1,751 +1,1287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 
+		<!-- SEO meta -->
+		<meta
+			name="description"
+			content="Мы - предприятие с богатым опытом и стремлением к инновациям в сфере металло и деревообработки. Предлагаем широкий спектр услуг по обработке материалов с использованием современного и высокотехнологичного оборудования."
+		/>
+		<meta
+			name="keywords"
+			content="ООО ДЕССЕД-Д, DESSED, DESSED-D, дессед, дессед-д, компания дессед-д, десед"
+		/>
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large"
+		/>
+		<meta
+			name="googlebot"
+			content="index, follow"
+		/>
+		<link
+			rel="canonical"
+			href="https://dessed.vercel.app/"
+		/>
+		<meta
+			property="og:type"
+			content="article"
+		/>
+		<meta
+			property="og:title"
+			content="DESSED - Металлообработка и производство тары"
+		/>
+		<meta
+			property="og:description"
+			content="Изготовление технологической оснастки и деревянной тары любой сложности"
+		/>
+		<meta
+			property="og:image"
+			content="./images/logo.png"
+		/>
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
 
-    <!-- SEO meta -->
-    <meta name="description" content="Мы - предприятие с богатым опытом и стремлением к инновациям в сфере металло и деревообработки. Предлагаем широкий спектр услуг по обработке материалов с использованием современного и высокотехнологичного оборудования.">
-    <meta name="keywords" content="ООО ДЕССЕД-Д, DESSED, DESSED-D, дессед, дессед-д, компания дессед-д, десед">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="googlebot" content="index, follow">
-    <link rel="canonical" href="https://dessed.vercel.app/">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="DESSED - Металлообработка и производство тары">
-    <meta property="og:description" content="Изготовление технологической оснастки и деревянной тары любой сложности">
-    <meta property="og:image" content="./images/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-   
-   
-    <!-- FAVICONS -->
-    <link rel="icon" type="image/x-icon" href="./favicons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="./favicons/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicons/favicon-64x64.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="./favicons/favicon-128x128.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="./favicons/favicon-256x256.png">
-    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
-    <link rel="apple-touch-icon" sizes="192x192" href="./favicons/android-chrome-192x192.png">
-    <link rel="manifest" href="./site.webmanifest">
+		<!-- FAVICONS -->
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./favicons/favicon.ico"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicons/favicon-16x16.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="48x48"
+			href="./favicons/favicon-48x48.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="64x64"
+			href="./favicons/favicon-64x64.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="128x128"
+			href="./favicons/favicon-128x128.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="256x256"
+			href="./favicons/favicon-256x256.png"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="./favicons/favicon.svg"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="192x192"
+			href="./favicons/android-chrome-192x192.png"
+		/>
+		<link
+			rel="manifest"
+			href="./site.webmanifest"
+		/>
 
-    <title>DESSED - Металлообработка и производство тары</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/slide.css">
-    <link rel="stylesheet" href="./css/modal.css">
-    
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/projects.css">
-    
-</head>
-<body class="">
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                    <img src="./images/logo.png" alt="DESSED">
-                </div>
-            <nav>
-                
-                
-                <!-- Десктопная навигация -->
-                <div class="nav-buttons">
-                    <a href="#about" class="nav-button">О компании</a>
-                    <a href="#services" class="nav-button">Услуги</a>
-                    <a href="#projects" class="nav-button">Наши проекты</a>
-                    <a href="#location" class="nav-button">Контакты</a>
-                </div>
+		<title>DESSED - Металлообработка и производство тары</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/slide.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/modal.css"
+		/>
 
-             
-                
-                <!-- Кнопка мобильного меню -->
-                <button class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-               <div class="header-contacts">
-                <a href="tel:89278175535" class="header-contact">
-                    <i class="fas fa-phone header-icon"></i>
-                    <span>+7 (927) 817-55-35</span>
-                </a>
-                <a href="mailto:dessed.d@yandex.ru" class="header-contact">
-                    <i class="fas fa-envelope header-icon"></i>
-                   <span> dessed.d@yandex.ru</span>
-                </a>
-                </div>
-        </div>
-        
-        <!-- Мобильная шторка -->
-        <div class="mobile-menu">
-            <div class="mobile-menu-header">
-                <img src="./images/logo.png" alt="DESSED" class="mobile-menu-logo">
-                <div class="mobile-menu-title">DESSED</div>
-            </div>
-            
-            <div class="mobile-nav">
-                <a href="#about" class="mobile-nav-button">
-                    <i class="fas fa-building" aria-hidden="true"></i>
-                    О компании
-                </a>
-                <a href="#services" class="mobile-nav-button">
-                    <i class="fas fa-cogs" aria-hidden="true"></i>
-                    Услуги
-                </a>
-                  <a href="#projects" class="mobile-nav-button">
-                    <i class="fa fa-file" aria-hidden="true"></i>
-                    Наши проекты
-                </a>
-                <a href="#location" class="mobile-nav-button">
-                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                    Контакты
-                </a>
-                <a href="tel:+79278175535" class="mobile-nav-button">
-                    <i class="fas fa-phone" aria-hidden="true"></i>
-                    Позвонить
-                </a>
-            </div>
-            
-            <div class="mobile-contacts">
-                <h3>Контакты</h3>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    +7 (927) 818-55-35
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    dessed.d@yandex.ru
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    Пн-Пт: 9:00-18:00
-                </div>
-            </div>
-        </div>
-        
-        <!-- Оверлей для шторки -->
-        <div class="menu-overlay"></div>
-    </header>
+		<link
+			rel="stylesheet"
+			href="./css/footer.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/header.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/projects.css"
+		/>
+	</head>
+	<body class="">
+		<header>
+			<div class="container header-container">
+				<div class="logo">
+					<img
+						src="./images/logo.png"
+						alt="DESSED"
+					/>
+				</div>
+				<nav>
+					<!-- Десктопная навигация -->
+					<div class="nav-buttons">
+						<a
+							href="#about"
+							class="nav-button"
+						>
+							О компании
+						</a>
+						<a
+							href="#services"
+							class="nav-button"
+						>
+							Услуги
+						</a>
+						<a
+							href="#projects"
+							class="nav-button"
+						>
+							Наши проекты
+						</a>
+						<a
+							href="#location"
+							class="nav-button"
+						>
+							Контакты
+						</a>
+					</div>
 
-    
+					<!-- Кнопка мобильного меню -->
+					<button class="menu-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</nav>
+				<div class="header-contacts">
+					<a
+						href="tel:89278175535"
+						class="header-contact"
+					>
+						<i class="fas fa-phone header-icon"></i>
+						<span>+7 (927) 817-55-35</span>
+					</a>
+					<a
+						href="mailto:dessed.d@yandex.ru"
+						class="header-contact"
+					>
+						<i class="fas fa-envelope header-icon"></i>
+						<span>dessed.d@yandex.ru</span>
+					</a>
+				</div>
+			</div>
 
-    <!-- Контент страницы -->
-    <main style="margin-top: 0px;">
-        <section id="about" class="about-carousel">
-            <div class="loading">
-                <div class="loading-progress" style="width: 100%;"></div>
-            </div>
-            
-            <div class="slide-counter">
-                <span class="current-slide">1</span>/<span class="total-slides">8</span>
-            </div>
+			<!-- Мобильная шторка -->
+			<div class="mobile-menu">
+				<div class="mobile-menu-header">
+					<img
+						src="./images/logo.png"
+						alt="DESSED"
+						class="mobile-menu-logo"
+					/>
+					<div class="mobile-menu-title">DESSED</div>
+				</div>
 
-            <div class="carousel-container">
-                <!-- Слайд 1 -->
-                <div class="carousel-slide slide-active">
-                     <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
-                        <source src="./videos2/1-1.mov" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <h2 class="slide-title">О НАС</h2>
-                        <p class="slide-description">
-                           Мы – предприятие с богатым опытом и стремлением к инновациям в сфере металло- и деревообработки. 
-                           Основались в конце 2018 года и с тех пор зарекомендовали себя надежным партнером для компаний из различных отраслей.
-                        </p>
-                    </div>
-                </div>
+				<div class="mobile-nav">
+					<a
+						href="#about"
+						class="mobile-nav-button"
+					>
+						<i
+							class="fas fa-building"
+							aria-hidden="true"
+						></i>
+						О компании
+					</a>
+					<a
+						href="#services"
+						class="mobile-nav-button"
+					>
+						<i
+							class="fas fa-cogs"
+							aria-hidden="true"
+						></i>
+						Услуги
+					</a>
+					<a
+						href="#projects"
+						class="mobile-nav-button"
+					>
+						<i
+							class="fa fa-file"
+							aria-hidden="true"
+						></i>
+						Наши проекты
+					</a>
+					<a
+						href="#location"
+						class="mobile-nav-button"
+					>
+						<i
+							class="fas fa-map-marker-alt"
+							aria-hidden="true"
+						></i>
+						Контакты
+					</a>
+					<a
+						href="tel:+79278175535"
+						class="mobile-nav-button"
+					>
+						<i
+							class="fas fa-phone"
+							aria-hidden="true"
+						></i>
+						Позвонить
+					</a>
+				</div>
 
-                <!-- Слайд 2 -->
-                <div class="carousel-slide">
-                      <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
-                        <source src="./videos2/2.MOV" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <h2 class="slide-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
-                        <p class="slide-description">
-                            Предлагаем вам изготовление и проектирование технологической оснастки любой сложности 
-                            (пресс-формы, приспособления, штампы и др.). 
-                            А так же оказываем широкий спектр услуг по обработке различных материалов с использованием современного 
-                            и высокотехнологичного оборудования
-                        </p>
-                    </div>
-                </div>
+				<div class="mobile-contacts">
+					<h3>Контакты</h3>
+					<div class="contact-item">
+						<i class="fas fa-phone"></i>
+						+7 (927) 817-55-35
+					</div>
+					<div class="contact-item">
+						<i class="fas fa-envelope"></i>
+						dessed.d@yandex.ru
+					</div>
+					<div class="contact-item">
+						<i class="fas fa-clock"></i>
+						Пн-Пт: 8:00-17:00
+					</div>
+				</div>
+			</div>
 
-                <!-- Слайд 3 -->
-                <div class="carousel-slide">
-                      <video class="slide-image" autoplay="" muted="" loop="" playsinline="" onended="playNext()">
-                        <source src="./videos2/3.MOV" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <h2 class="slide-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
-                        <p class="slide-description">
-                           Изготовим деревянную тару и упаковку для любых задач – от стандартных до самых нестандартных. 
-                           Если у вас есть готовые чертежи – отлично! 
-                           Нет? Не проблема – мы разработаем всю необходимую документацию сами, чтобы ваша упаковка была идеальной.
-                        </p>
-                    </div>
-                </div>
+			<!-- Оверлей для шторки -->
+			<div class="menu-overlay"></div>
+		</header>
 
-            </div>
+		<!-- Контент страницы -->
+		<main style="margin-top: 0px">
+			<section
+				id="about"
+				class="about-carousel"
+			>
+				<div class="loading">
+					<div
+						class="loading-progress"
+						style="width: 100%"
+					></div>
+				</div>
 
-            <button class="nav-arrow prev">‹</button>
-            <button class="nav-arrow next">›</button>
+				<div class="slide-counter">
+					<span class="current-slide">1</span>
+					/
+					<span class="total-slides">8</span>
+				</div>
 
-            <div class="carousel-nav">
-                <div class="nav-dot active" data-slide="0"></div>
-                <div class="nav-dot" data-slide="1"></div>
-                <div class="nav-dot" data-slide="2"></div>
-            </div>
-        </section>
+				<div class="carousel-container">
+					<!-- Слайд 1 -->
+					<div class="carousel-slide slide-active">
+						<video
+							class="slide-image"
+							autoplay=""
+							muted=""
+							loop=""
+							playsinline=""
+							onended="playNext()"
+						>
+							<source
+								src="./videos2/1-1.mov"
+								type="video/mp4"
+							/>
+							Ваш браузер не поддерживает видео.
+						</video>
+						<div class="slide-overlay"></div>
+						<div class="slide-content">
+							<h2 class="slide-title">О НАС</h2>
+							<p class="slide-description">
+								Мы – предприятие с богатым опытом и стремлением к инновациям в
+								сфере металло- и деревообработки. Основались в конце 2018 года и
+								с тех пор зарекомендовали себя надежным партнером для компаний
+								из различных отраслей.
+							</p>
+						</div>
+					</div>
 
-        <section id="services">
-           
-            <div class="container">
-                <h2>Услуги</h2>
-                <div class="services-container">
-                    <div class="services-scroll">
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/milling.jpg" alt="Фрезерные работы на универсальных и станках с ЧПУ" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Фрезерные работы на универсальных и станках с ЧПУ</h3>
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s; transform: translateY(0px);">
-                            <div class="service-image">
-                                <img src="./images/worked/шлифовальныеРаботы.jpg" alt="Шлифовальные работы" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Шлифовальные работы</h3>
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s; transform: translateY(0px);">
-                            <div class="service-image">
-                                <img src="./images/worked/3-2-min.jpg" alt="Токарные работа" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Токарные работы</h3>
-                                
-                            </div>
-                        </div>
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/электроэрозионная обработка.jpg" alt="Электроэрозионная обработка" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Электроэрозионная обработка</h3>
-                                
-                            </div>
-                        </div>
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/8916.jpg" alt="Сверлильные работы" aria-label="Картинка услуг" style="object-fit: cover; object-position: center top;">
-                            </div>
-                            <div class="service-content">
-                                <h3>Сверлильные работы</h3>
-                                
-                            </div>
-                        </div>
-                         <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/6.jpg" alt="Полировка металла" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Полировка металла</h3>
-                                
-                            </div>
-                        </div>
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/5-1.jpg" alt="Слесарные работы" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Слесарные работы</h3>
-                                
-                            </div>
-                        </div>
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/Сварочные работы2-1.jpg" alt="Сварочные работы" aria-label="Картинка услуг">
-                            </div>
-                            <div class="service-content">
-                                <h3>Сварочные работы</h3>
-                                
-                            </div>
-                        </div>
+					<!-- Слайд 2 -->
+					<div class="carousel-slide">
+						<video
+							class="slide-image"
+							autoplay=""
+							muted=""
+							loop=""
+							playsinline=""
+							onended="playNext()"
+						>
+							<source
+								src="./videos2/2.MOV"
+								type="video/mp4"
+							/>
+							Ваш браузер не поддерживает видео.
+						</video>
+						<div class="slide-overlay"></div>
+						<div class="slide-content">
+							<h2 class="slide-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+							<p class="slide-description">
+								Предлагаем вам изготовление и проектирование технологической
+								оснастки любой сложности (пресс-формы, приспособления, штампы и
+								др.). А так же оказываем широкий спектр услуг по обработке
+								различных материалов с использованием современного и
+								высокотехнологичного оборудования
+							</p>
+						</div>
+					</div>
 
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images2/3.jpg" alt="Изготовление деревянной тары">
-                            </div>
-                            <div class="service-content">
-                                <h3>Изготовление деревянной тары</h3>
-                                
-                            </div>
-                        </div>
+					<!-- Слайд 3 -->
+					<div class="carousel-slide">
+						<video
+							class="slide-image"
+							autoplay=""
+							muted=""
+							loop=""
+							playsinline=""
+							onended="playNext()"
+						>
+							<source
+								src="./videos2/3.MOV"
+								type="video/mp4"
+							/>
+							Ваш браузер не поддерживает видео.
+						</video>
+						<div class="slide-overlay"></div>
+						<div class="slide-content">
+							<h2 class="slide-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+							<p class="slide-description">
+								Изготовим деревянную тару и упаковку для любых задач – от
+								стандартных до самых нестандартных. Если у вас есть готовые
+								чертежи – отлично! Нет? Не проблема – мы разработаем всю
+								необходимую документацию сами, чтобы ваша упаковка была
+								идеальной.
+							</p>
+						</div>
+					</div>
+				</div>
 
+				<button class="nav-arrow prev">‹</button>
+				<button class="nav-arrow next">›</button>
 
-                        <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/МДФ4.jpg" alt="изготовление изделий из МДФ">
-                            </div>
-                            <div class="service-content">
-                                <h3>Изготовление изделий из МДФ</h3>
-                                
-                            </div>
-                        </div>
-                         <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images2/11.jpg" alt="Изготовление пресс-форм, штампов, приспособлений и др.">
-                            </div>
-                            <div class="service-content">
-                                <h3>Изготовление пресс-форм, штампов, приспособлений и др.</h3>
-                                
-                            </div>
-                        </div>
-                          <div class="service-card" style="cursor: pointer; transition: 0.3s;">
-                            <div class="service-image">
-                                <img src="./images/worked/разработка констуркторской документации.png" alt="Разработка конструкторской документации">
-                            </div>
-                            <div class="service-content">
-                                <h3>Разработка конструкторской документации</h3>
-                                
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="carousel-nav">
+					<div
+						class="nav-dot active"
+						data-slide="0"
+					></div>
+					<div
+						class="nav-dot"
+						data-slide="1"
+					></div>
+					<div
+						class="nav-dot"
+						data-slide="2"
+					></div>
+				</div>
+			</section>
 
-        <section id="projects">
-           
-            <div class="container">
-                <h2>Наши проекты</h2>
-                <p class="description">
-                        Мы воплощаем ваши чертежи и эскизы в конечные продукты, гарантируя высокую точность, <br> превосходное качество и индивидуальный подход к каждому заказу.
-                </p>
-                <div class="projects-container">
-                    <div class="projects-item">
-                    <img src="./images2/1.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/2.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/3.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/4.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/5.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/6.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
+			<section id="services">
+				<div class="container">
+					<h2>Услуги</h2>
+					<div class="services-container">
+						<div class="services-scroll">
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/milling.jpg"
+										alt="Фрезерные работы на универсальных и станках с ЧПУ"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Фрезерные работы на универсальных и станках с ЧПУ</h3>
+								</div>
+							</div>
 
-                 <div class="projects-item">
-                    <img src="./images2/7.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                
-                 <div class="projects-item">
-                    <img src="./images2/8.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/9.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/10.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/11.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/12.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/13.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/14.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/15.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/16.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/17.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/18.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/19.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/20.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/21.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/22.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/23.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/24.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/25.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/26.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/27.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/28.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/29.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/30.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/31.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/32.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/33.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/34.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/35.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/36.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/37.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/38.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/39.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                  <div class="projects-item">
-                    <img src="./images2/40.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/41.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                 <div class="projects-item">
-                    <img src="./images2/42.jpg" class="projects-image" alt="Картинка проекта" aria-label="Картинка проекта">
-                 </div>
-                </div>
-                <div class="btn-container"><button type="button" class="project-btn">Показать ещё</button></div>
-            </div>
-        </section>
-        
-         <div id="location" class="container">
-            
-         <link rel="stylesheet" href="./css/ya.css">
+							<div
+								class="service-card"
+								style="
+									cursor: pointer;
+									transition: 0.3s;
+									transform: translateY(0px);
+								"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/шлифовальныеРаботы.jpg"
+										alt="Шлифовальные работы"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Шлифовальные работы</h3>
+								</div>
+							</div>
 
- <div class="map-container">
-    
-            <div class="map-frame">
-                <h2>Где мы находимся</h2>
-                <div class="map-inner">
-                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4ef1db719e3c1300ae5d797ebbb5f937ce822b293e138691e0955046209dbce&amp;source=constructor" allowfullscreen frameborder="0"></iframe>
-                </div>
-                
-                
-            </div>
-            <div class="contacts">
-                <h2>Контакты</h2>
-                <div class="contact contact__adress">
-                   Адрес производства: 433513, Ульяновская обл., г. Димитровград, пр&#8209;кт.&nbsp;Автостроителей, 78/71
-                </div>
-                <div class="contact contact__phone"> 
-                    Телефон: <a href="tel:79279175535" class="phone-link">+7-927-817-55-35</a>
-                </div>
-                <div class="contact contact__email">
-                    Email: 
-                    <a href="mailto:dessed.d@yandex.ru" class="email-link">dessed.d@yandex.ru</a> , 
-                    <a href="mailto:dessed.KD@yandex.ru" class="email-link">dessed.KD@yandex.ru</a>
-                </div>
-                <div class="contact contact__worktime">
-                    Режим работы: ПН-ПТ с 8:00 до 17:00, СБ и ВС - выходные.
-                </div>
-            </div>
-        </div>
-    </div>
+							<div
+								class="service-card"
+								style="
+									cursor: pointer;
+									transition: 0.3s;
+									transform: translateY(0px);
+								"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/3-2-min.jpg"
+										alt="Токарные работа"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Токарные работы</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/электроэрозионная обработка.jpg"
+										alt="Электроэрозионная обработка"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Электроэрозионная обработка</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/8916.jpg"
+										alt="Сверлильные работы"
+										aria-label="Картинка услуг"
+										style="object-fit: cover; object-position: center top"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Сверлильные работы</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/6.jpg"
+										alt="Полировка металла"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Полировка металла</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/5-1.jpg"
+										alt="Слесарные работы"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Слесарные работы</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/Сварочные работы2-1.jpg"
+										alt="Сварочные работы"
+										aria-label="Картинка услуг"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Сварочные работы</h3>
+								</div>
+							</div>
 
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images2/3.jpg"
+										alt="Изготовление деревянной тары"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Изготовление деревянной тары</h3>
+								</div>
+							</div>
 
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/МДФ4.jpg"
+										alt="изготовление изделий из МДФ"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Изготовление изделий из МДФ</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images2/11.jpg"
+										alt="Изготовление пресс-форм, штампов, приспособлений и др."
+									/>
+								</div>
+								<div class="service-content">
+									<h3>
+										Изготовление пресс-форм, штампов, приспособлений и др.
+									</h3>
+								</div>
+							</div>
+							<div
+								class="service-card"
+								style="cursor: pointer; transition: 0.3s"
+							>
+								<div class="service-image">
+									<img
+										src="./images/worked/разработка констуркторской документации.png"
+										alt="Разработка конструкторской документации"
+									/>
+								</div>
+								<div class="service-content">
+									<h3>Разработка конструкторской документации</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<section id="projects">
+				<div class="container">
+					<h2>Наши проекты</h2>
+					<p class="description">
+						Мы воплощаем ваши чертежи и эскизы в конечные продукты, гарантируя
+						высокую точность,
+						<br />
+						превосходное качество и индивидуальный подход к каждому заказу.
+					</p>
+					<div class="projects-container">
+						<div class="projects-item">
+							<img
+								src="./images2/1.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/2.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/3.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/4.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/5.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/6.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
 
+						<div class="projects-item">
+							<img
+								src="./images2/7.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
 
+						<div class="projects-item">
+							<img
+								src="./images2/8.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/9.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/10.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/11.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/12.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/13.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/14.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/15.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/16.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/17.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/18.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/19.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/20.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/21.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/22.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/23.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/24.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/25.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/26.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/27.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/28.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/29.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/30.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/31.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/32.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/33.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/34.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/35.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/36.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/37.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/38.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/39.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/40.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/41.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+						<div class="projects-item">
+							<img
+								src="./images2/42.jpg"
+								class="projects-image"
+								alt="Картинка проекта"
+								aria-label="Картинка проекта"
+							/>
+						</div>
+					</div>
+					<div class="btn-container">
+						<button
+							type="button"
+							class="project-btn"
+						>
+							Показать ещё
+						</button>
+					</div>
+				</div>
+			</section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">DES<span style="color:#0059a4">SED</span></div>
-                    
-                
-                <div class="footer-right">
-                    <h10>Карта партнёра</h10>
-                    <p>
-                    </p>
-                    <div class="partner-card">
-                        <div>
-                        </div>
-                        <ul>
-                            <li>
-                                <span class="label">ИНН</span>
-                                <span class="value">7329028965</span>
-                            </li>
-                            <li>
-                                <span class="label">КПП</span>
-                                <span class="value">732901001</span>
-                            </li>
-                            <li>
-                                <span class="label">ОГРН</span>
-                                <span class="value">1187325018990</span>
-                            </li>
-                            <li>
-                                <span class="label">ОКПО</span>
-                                <span class="value">33986424</span>
-                            </li>
-                            <li>
-                                <span class="label">Телефон</span>
-                                <span class="value"><a class="modal-link" href="tel:89278175535">+7 (927) 817-55-35</a></span>
-                            </li>
-                            <li>
-                                <span class="label">Email</span>
-                                <span class="value"><a class="modal-link" href="mailto:dessed.d@yandex.ru">dessed.d@yandex.ru</a></span>
-                            </li>
-                            <li>
-                                <span class="label">Генеральный директор</span>
-                                <span class="value">Павлов Денис Анатольевич</span>
-                            </li>
-                        </ul>
-                    </div>
-                  
-                </div>
-                <p>
-                </p>
-                <div class="footer-info">
-                        <p>Производство и обработка металла и дерева</p>
-                        <p>© 2026 Все права защищены</p>
-                    </div>
-                </div>
-                
-                <div class="copyright">
-                    <p>Сайт разработан для демонстрации услуг компании</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+			<div
+				id="location"
+				class="container"
+			>
+				<link
+					rel="stylesheet"
+					href="./css/ya.css"
+				/>
 
- 
+				<div class="map-container">
+					<div class="map-frame">
+						<h2>Где мы находимся</h2>
+						<div class="map-inner">
+							<iframe
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4ef1db719e3c1300ae5d797ebbb5f937ce822b293e138691e0955046209dbce&amp;source=constructor"
+								allowfullscreen
+								frameborder="0"
+							></iframe>
+						</div>
+					</div>
+					<div class="contacts">
+						<h2>Контакты</h2>
+						<div class="contact contact__adress">
+							Адрес производства: 433513, Ульяновская обл., г. Димитровград,
+							пр&#8209;кт.&nbsp;Автостроителей, 78/71
+						</div>
+						<div class="contact contact__phone">
+							Телефон:
+							<a
+								href="tel:79279175535"
+								class="phone-link"
+							>
+								+7-927-817-55-35
+							</a>
+						</div>
+						<div class="contact contact__email">
+							Email:
+							<a
+								href="mailto:dessed.d@yandex.ru"
+								class="email-link"
+							>
+								dessed.d@yandex.ru
+							</a>
+							,
+							<a
+								href="mailto:dessed.KD@yandex.ru"
+								class="email-link"
+							>
+								dessed.KD@yandex.ru
+							</a>
+						</div>
+						<div class="contact contact__worktime">
+							Режим работы: ПН-ПТ с 8:00 до 17:00, СБ и ВС - выходные.
+						</div>
+					</div>
+				</div>
+			</div>
 
-</main>
-     <script>
-        // Скрипт для адаптивного меню
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            const menuOverlay = document.querySelector('.menu-overlay');
-            const menuLinks = document.querySelectorAll('.menu-link');
-            const header = document.querySelector('header');
-            const mobileNavButtons = document.querySelectorAll('.mobile-nav-button');
-            
-            // Функция для изменения хеддера при скролле
-            function handleScroll() {
-                if (window.innerWidth <= 768) {
-                    if (window.scrollY > 50) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                }
-            }
-            
-            // Открытие/закрытие меню
-            function toggleMenu() {
-                body.classList.toggle('menu-open');
-                
-                // Блокировка скролла
-                if (body.classList.contains('menu-open')) {
-                    document.documentElement.style.overflow = 'hidden';
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
-                }
-            }
-            
-            menuToggle.addEventListener('click', toggleMenu);
-            
-            // Закрытие меню при клике на overlay
-            menuOverlay.addEventListener('click', function() {
-                if (body.classList.contains('menu-open')) {
-                    toggleMenu();
-                }
-            });
-            
-            // Закрытие меню при клике на ссылку (для мобильного меню)
-            mobileNavButtons.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (body.classList.contains('menu-open')) {
-                        toggleMenu();
-                    }
-                });
-            });
-            
-            // Закрытие меню при изменении ориентации или размера экрана
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && body.classList.contains('menu-open')) {
-                    toggleMenu();
-                }
-                
-                // Сбрасываем стили скролла при изменении размера
-                if (window.innerWidth > 768) {
-                    header.classList.remove('scrolled');
-                    document.querySelector('main').style.marginTop = '0';
-                } else {
-                    document.querySelector('main').style.marginTop = '80px';
-                }
-            });
-            
-            // Обработчик скролла для фиксированного хеддера
-            window.addEventListener('scroll', handleScroll);
-            
-            // Инициализация отступа для мобильных
-            if (window.innerWidth <= 768) {
-                document.querySelector('main').style.marginTop = '80px';
-            }
-            
-            // Предотвращение скролла при открытом меню на мобильных
-            document.addEventListener('touchmove', function(e) {
-                if (body.classList.contains('menu-open')) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
-            
-            // Плавная прокрутка к якорям
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+			<footer>
+				<div class="container">
+					<div class="footer-content">
+						<div class="footer-left">
+							<div class="footer-logo">
+								DES
+								<span style="color: #0059a4">SED</span>
+							</div>
 
-            // Скрипт для прокрутки сервисных карточек
-            document.querySelectorAll('.services-container').forEach(container => {
-                const scrollElement = container.querySelector('.services-scroll');
-                const leftBtn = container.querySelector('.left-btn');
-                const rightBtn = container.querySelector('.right-btn');
-                
-                if (leftBtn && rightBtn) {
-                    leftBtn.addEventListener('click', () => {
-                        scrollElement.scrollBy({ left: -320, behavior: 'smooth' });
-                    });
-                    
-                    rightBtn.addEventListener('click', () => {
-                        scrollElement.scrollBy({ left: 320, behavior: 'smooth' });
-                    });
-                }
-            });
+							<div class="footer-right">
+								<h10>Карта партнёра</h10>
+								<p></p>
+								<div class="partner-card">
+									<div></div>
+									<ul>
+										<li>
+											<span class="label">ИНН</span>
+											<span class="value">7329028965</span>
+										</li>
+										<li>
+											<span class="label">КПП</span>
+											<span class="value">732901001</span>
+										</li>
+										<li>
+											<span class="label">ОГРН</span>
+											<span class="value">1187325018990</span>
+										</li>
+										<li>
+											<span class="label">ОКПО</span>
+											<span class="value">33986424</span>
+										</li>
+										<li>
+											<span class="label">Телефон</span>
+											<span class="value">
+												<a
+													class="modal-link"
+													href="tel:89278175535"
+												>
+													+7 (927) 817-55-35
+												</a>
+											</span>
+										</li>
+										<li>
+											<span class="label">Email</span>
+											<span class="value">
+												<a
+													class="modal-link"
+													href="mailto:dessed.d@yandex.ru"
+												>
+													dessed.d@yandex.ru
+												</a>
+											</span>
+										</li>
+										<li>
+											<span class="label">Генеральный директор</span>
+											<span class="value">Павлов Денис Анатольевич</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<p></p>
+							<div class="footer-info">
+								<p>Производство и обработка металла и дерева</p>
+								<p>© 2026 Все права защищены</p>
+							</div>
+						</div>
 
-            // Функция для проверки необходимости прокрутки
-            function checkScrollNeeded() {
-                document.querySelectorAll('.services-container').forEach(container => {
-                    const scrollElement = container.querySelector('.services-scroll');
-                    const controls = container.querySelector('.scroll-controls');
-                    
-                    if (scrollElement && controls) {
-                        const containerWidth = scrollElement.clientWidth;
-                        const contentWidth = scrollElement.scrollWidth;
-                        
-                        if (contentWidth > containerWidth) {
-                            controls.style.display = 'flex';
-                            container.classList.add('has-scroll');
-                        } else {
-                            controls.style.display = 'none';
-                            container.classList.remove('has-scroll');
-                        }
-                    }
-                });
-            }
-            
-            // Проверяем при загрузке
-            checkScrollNeeded();
-            
-            // Проверяем при изменении размера окна (с debounce)
-            let resizeTimeout;
-            window.addEventListener('resize', function() {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(checkScrollNeeded, 250);
-            });
-            
-            // ResizeObserver для более точного отслеживания
-            const resizeObserver = new ResizeObserver(entries => {
-                entries.forEach(entry => {
-                    checkScrollNeeded();
-                });
-            });
-            
-            // Наблюдаем за всеми контейнерами услуг
-            document.querySelectorAll('.services-scroll').forEach(scrollElement => {
-                resizeObserver.observe(scrollElement);
-            });
-        });
-    </script>
-    <script src="./scripts/bokehPlaylist.js"></script>
-    <script src="./scripts/slide.js"></script>
-    <script src="./scripts/scroll.js"></script>
-    <script src="./scripts/modal.js"></script>
-    <script src="./scripts/projects.js"></script>
-</body>
+						<div class="copyright">
+							<p>Сайт разработан для демонстрации услуг компании</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script>
+			// Скрипт для адаптивного меню
+			document.addEventListener('DOMContentLoaded', function () {
+				const menuToggle = document.querySelector('.menu-toggle')
+				const body = document.body
+				const menuOverlay = document.querySelector('.menu-overlay')
+				const menuLinks = document.querySelectorAll('.menu-link')
+				const header = document.querySelector('header')
+				const mobileNavButtons = document.querySelectorAll('.mobile-nav-button')
+
+				// Функция для изменения хеддера при скролле
+				function handleScroll() {
+					if (window.innerWidth <= 768) {
+						if (window.scrollY > 50) {
+							header.classList.add('scrolled')
+						} else {
+							header.classList.remove('scrolled')
+						}
+					}
+				}
+
+				// Открытие/закрытие меню
+				function toggleMenu() {
+					body.classList.toggle('menu-open')
+
+					// Блокировка скролла
+					if (body.classList.contains('menu-open')) {
+						document.documentElement.style.overflow = 'hidden'
+						document.body.style.overflow = 'hidden'
+					} else {
+						document.documentElement.style.overflow = ''
+						document.body.style.overflow = ''
+					}
+				}
+
+				menuToggle.addEventListener('click', toggleMenu)
+
+				// Закрытие меню при клике на overlay
+				menuOverlay.addEventListener('click', function () {
+					if (body.classList.contains('menu-open')) {
+						toggleMenu()
+					}
+				})
+
+				// Закрытие меню при клике на ссылку (для мобильного меню)
+				mobileNavButtons.forEach(link => {
+					link.addEventListener('click', function () {
+						if (body.classList.contains('menu-open')) {
+							toggleMenu()
+						}
+					})
+				})
+
+				// Закрытие меню при изменении ориентации или размера экрана
+				window.addEventListener('resize', function () {
+					if (window.innerWidth > 768 && body.classList.contains('menu-open')) {
+						toggleMenu()
+					}
+
+					// Сбрасываем стили скролла при изменении размера
+					if (window.innerWidth > 768) {
+						header.classList.remove('scrolled')
+						document.querySelector('main').style.marginTop = '0'
+					} else {
+						document.querySelector('main').style.marginTop = '80px'
+					}
+				})
+
+				// Обработчик скролла для фиксированного хеддера
+				window.addEventListener('scroll', handleScroll)
+
+				// Инициализация отступа для мобильных
+				if (window.innerWidth <= 768) {
+					document.querySelector('main').style.marginTop = '80px'
+				}
+
+				// Предотвращение скролла при открытом меню на мобильных
+				document.addEventListener(
+					'touchmove',
+					function (e) {
+						if (body.classList.contains('menu-open')) {
+							e.preventDefault()
+						}
+					},
+					{ passive: false }
+				)
+
+				// Плавная прокрутка к якорям
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function (e) {
+						e.preventDefault()
+
+						const targetId = this.getAttribute('href')
+						if (targetId === '#') return
+
+						const targetElement = document.querySelector(targetId)
+						if (targetElement) {
+							const headerHeight = document.querySelector('header').offsetHeight
+							const targetPosition =
+								targetElement.getBoundingClientRect().top +
+								window.pageYOffset -
+								headerHeight
+
+							window.scrollTo({
+								top: targetPosition,
+								behavior: 'smooth'
+							})
+						}
+					})
+				})
+
+				// Скрипт для прокрутки сервисных карточек
+				document.querySelectorAll('.services-container').forEach(container => {
+					const scrollElement = container.querySelector('.services-scroll')
+					const leftBtn = container.querySelector('.left-btn')
+					const rightBtn = container.querySelector('.right-btn')
+
+					if (leftBtn && rightBtn) {
+						leftBtn.addEventListener('click', () => {
+							scrollElement.scrollBy({ left: -320, behavior: 'smooth' })
+						})
+
+						rightBtn.addEventListener('click', () => {
+							scrollElement.scrollBy({ left: 320, behavior: 'smooth' })
+						})
+					}
+				})
+
+				// Функция для проверки необходимости прокрутки
+				function checkScrollNeeded() {
+					document
+						.querySelectorAll('.services-container')
+						.forEach(container => {
+							const scrollElement = container.querySelector('.services-scroll')
+							const controls = container.querySelector('.scroll-controls')
+
+							if (scrollElement && controls) {
+								const containerWidth = scrollElement.clientWidth
+								const contentWidth = scrollElement.scrollWidth
+
+								if (contentWidth > containerWidth) {
+									controls.style.display = 'flex'
+									container.classList.add('has-scroll')
+								} else {
+									controls.style.display = 'none'
+									container.classList.remove('has-scroll')
+								}
+							}
+						})
+				}
+
+				// Проверяем при загрузке
+				checkScrollNeeded()
+
+				// Проверяем при изменении размера окна (с debounce)
+				let resizeTimeout
+				window.addEventListener('resize', function () {
+					clearTimeout(resizeTimeout)
+					resizeTimeout = setTimeout(checkScrollNeeded, 250)
+				})
+
+				// ResizeObserver для более точного отслеживания
+				const resizeObserver = new ResizeObserver(entries => {
+					entries.forEach(entry => {
+						checkScrollNeeded()
+					})
+				})
+
+				// Наблюдаем за всеми контейнерами услуг
+				document.querySelectorAll('.services-scroll').forEach(scrollElement => {
+					resizeObserver.observe(scrollElement)
+				})
+			})
+		</script>
+		<script src="./scripts/bokehPlaylist.js"></script>
+		<script src="./scripts/slide.js"></script>
+		<script src="./scripts/scroll.js"></script>
+		<script src="./scripts/modal.js"></script>
+		<script src="./scripts/projects.js"></script>
+	</body>
 </html>
