@@ -1,142 +1,151 @@
 // Данные для модальных окон
 const modalData = {
+	'Фрезерные работы на универсальных и станках с ЧПУ': {
+		title: 'Фрезерные работы на универсальных и станках с ЧПУ',
+		image: './images/worked/milling.jpg',
+		description:
+			'Фрезерные работы – это высокоточный и универсальный метод обработки материалов, предлагающий широкий спектр преимуществ, которые делают его незаменимым в различных отраслях промышленности. У нас вы можете заказать высокоточную фрезерную обработку на станках с ЧПУ для решения задач любой сложности',
+		features: [
+			'Современное оборудование с ЧПУ, обеспечивающее высокую производительность',
+			'Высокая точность обработки',
+			'Возможность обработки сложных поверхностей',
+			'Работа с черным и цветным металлом, а так же МДФ'
+		]
+	},
+	'Шлифовальные работы': {
+		title: 'Шлифовальные работы',
+		image: './images/worked/Шлифовальные-работы.jpg',
+		description:
+			'Шлифование — это процесс, позволяющий добиться минимальной шероховатости поверхности и высочайшей точности размеров. Мы выполняем шлифовку металла для достижения идеальной геометрии и требуемой шероховатости',
+		features: [
+			'Обработка различных видов шлифовки: плоская, круглая и оптическая.',
+			'Высокая точность и качество поверхности',
+			'Обеспечение допуска формы и положения'
+		]
+	},
+	'Токарные работы': {
+		title: 'Токарные работы',
+		image: './images/worked/3-2-min.jpg',
+		description:
+			'От самых простых деталей до сложных компонентов. Токарная обработка предлагает уникальное сочетание преимуществ, делающих ее незаменимой во многих отраслях промышленности.',
+		features: [
+			'Изготовление деталей сложной формы',
+			'Высокая точность и качество',
+			'Возможность обработки внутренних и внешних поверхностей, нарезки резьбы.'
+		]
+	},
+	'Электроэрозионная обработка': {
+		title: 'Электроэрозионная обработка',
+		image: './images/worked/электроэрозионная обработка.jpg',
+		description:
+			'Электроэрозионная обработка — это уникальная технология, позволяющая работать с любыми токопроводящими материалами, независимо от их твердости.',
+		features: [
+			'Использование современного оборудования с ЧПУ',
+			'Высокая точность обработки',
+			'Практически любая конфигурация вырезов'
+		]
+	},
+	'Сверлильные работы': {
+		title: 'Сверлильные работы',
+		image: './images/worked/сверлильные-работы.jpg',
+		description:
+			'Мы выполняем сверлильные работы любой сложности с применением технологии глубокого сверления, а так же зенкование и нарезание резьбы на станочном оборудовании.',
+		features: [
+			'Идеально ровные и чистые отверстия',
+			'Высокая точность размеров',
+			'Отсутствие деформаций и сколов'
+		]
+	},
+	'Полировка металла': {
+		title: 'Полировка металла',
+		image: './images/worked/6.jpg',
+		description:
+			'Мы готовы выполнить для вас полировку металлических поверхностей до зеркального блеска с сохранением защитных свойств.',
+		features: [
+			'Идеальный зеркальный блеск',
+			'Защита от коррозии и загрязнений',
+			'Обработка любых форм и контуров'
+		]
+	},
 
-    'Фрезерные работы на универсальных и станках с ЧПУ': {
-        title: 'Фрезерные работы на универсальных и станках с ЧПУ',
-        image: './images/worked/milling.jpg',
-        description: 'Фрезерные работы – это высокоточный и универсальный метод обработки материалов, предлагающий широкий спектр преимуществ, которые делают его незаменимым в различных отраслях промышленности. У нас вы можете заказать высокоточную фрезерную обработку на станках с ЧПУ для решения задач любой сложности',
-        features: [
-            'Современное оборудование с ЧПУ, обеспечивающее высокую производительность',
-            'Высокая точность обработки',
-            'Возможность обработки сложных поверхностей',
-            'Работа с черным и цветным металлом, а так же МДФ',
-        ]
-    },
-    'Шлифовальные работы': {
-        title: 'Шлифовальные работы',
-        image: './images/worked/Шлифовальные-работы.jpg',
-        description: 'Шлифование — это процесс, позволяющий добиться минимальной шероховатости поверхности и высочайшей точности размеров. Мы выполняем шлифовку металла для достижения идеальной геометрии и требуемой шероховатости',
-        features: [
-            'Обработка различных видов шлифовки: плоская, круглая и оптическая.',
-            'Высокая точность и качество поверхности',
-            'Обеспечение допуска формы и положения',
-        ]
-    },
-    'Токарные работы': {
-        title: 'Токарные работы',
-        image: './images/worked/3-2-min.jpg',
-        description: 'От самых простых деталей до сложных компонентов. Токарная обработка предлагает уникальное сочетание преимуществ, делающих ее незаменимой во многих отраслях промышленности.',
-        features: [
-            'Изготовление деталей сложной формы',
-            'Высокая точность и качество',
-            'Возможность обработки внутренних и внешних поверхностей, нарезки резьбы.',
-        ]
-    },
-    'Электроэрозионная обработка': {
-        title: 'Электроэрозионная обработка',
-        image: './images/worked/электроэрозионная обработка.jpg',
-        description: 'Электроэрозионная обработка — это уникальная технология, позволяющая работать с любыми токопроводящими материалами, независимо от их твердости.',
-        features: [
-            'Использование современного оборудования с ЧПУ',
-            'Высокая точность обработки',
-            'Практически любая конфигурация вырезов',
-        ]
-    },
-    'Сверлильные работы': {
-        title: 'Сверлильные работы',
-        image: './images/worked/сверлильные-работы.jpg',
-        description: 'Мы выполняем сверлильные работы любой сложности с применением технологии глубокого сверления, а так же зенкование и нарезание резьбы на станочном оборудовании.',
-        features: [
-            'Идеально ровные и чистые отверстия',
-            'Высокая точность размеров',
-            'Отсутствие деформаций и сколов',
-        ]
-    },
-     'Полировка металла': {
-        title: 'Полировка металла',
-        image: './images/worked/6.jpg',
-        description: 'Мы готовы выполнить для вас полировку металлических поверхностей до зеркального блеска с сохранением защитных свойств.',
-        features: [
-            'Идеальный зеркальный блеск',
-            'Защита от коррозии и загрязнений',
-            'Обработка любых форм и контуров',
-        ]
-    },
+	'Слесарные работы': {
+		title: 'Слесарные работы',
+		image: './images/worked/5.jpg',
+		description:
+			'Слесарные работы позволяют выполнять разнообразные задачи, начиная от ремонта и сборки мелких деталей до создания сложных конструкций. Это делает их незаменимыми в различных отраслях',
+		features: [
+			'Обеспечение точной подгонки деталей, сборки, ремонта, монтажа или демонтажа различных конструкций и механизмов',
+			'Соблюдение размеров и технических требований',
+			'Современное оборудование'
+		]
+	},
+	'Сварочные работы': {
+		title: 'Сварочные работы',
+		image: './images/worked/Сварочные работы2-2.jpg',
+		description:
+			'Сварка представляет собой процесс получения неразъемного соединения металлов путем их местного сплавления. Она позволяет соединять детали самых разнообразных форм и размеров, создавая прочные и надежные конструкции',
+		features: [
+			'Высокое качество и контроль',
+			'Работаем с разными материалами и видами сварки',
+			'Создаем надежные неразъемные соединения'
+		]
+	},
 
-   'Слесарные работы': {
-        title: 'Слесарные работы',
-        image: './images/worked/5.jpg',
-        description: 'Слесарные работы позволяют выполнять разнообразные задачи, начиная от ремонта и сборки мелких деталей до создания сложных конструкций. Это делает их незаменимыми в различных отраслях',
-        features: [
-            'Обеспечение точной подгонки деталей, сборки, ремонта, монтажа или демонтажа различных конструкций и механизмов',
-            'Соблюдение размеров и технических требований',
-            'Современное оборудование',
-        ]
-    },
-       'Сварочные работы': {
-        title: 'Сварочные работы',
-        image: './images/worked/Сварочные работы2-2.jpg',
-        description: 'Сварка представляет собой процесс получения неразъемного соединения металлов путем их местного сплавления. Она позволяет соединять детали самых разнообразных форм и размеров, создавая прочные и надежные конструкции',
-        features: [
-            'Высокое качество и контроль',
-            'Работаем с разными материалами и видами сварки',
-            'Создаем надежные неразъемные соединения',
-        ]
-    },
+	'Изготовление деревянной тары': {
+		title: 'Изготовление деревянной тары',
+		image: './images/projects/3.jpg',
+		description:
+			'Мы производим надежную деревянную тару любого размера - от компактных ящиков до крупногабаритной упаковочной тары. Каждое изделие создается с учетом особенностей вашего груза и требований к транспортировке',
+		features: [
+			'Полный цикл производства - от распила до сборки',
+			'Использование качественной древесины',
+			'Выполним любые объемы - от единичных ящиков до крупных партий'
+		]
+	},
 
+	'Изготовление изделий из МДФ': {
+		title: 'Изготовление изделий из МДФ',
+		image: './images/worked/МДФ3.jpg',
+		description:
+			'Мы готовы предложить вам услуги по изготовлению технологической оснастки из МДФ для различных отраслей. Используем современные станки с ЧПУ для гарантии качества каждого изделия',
+		features: [
+			'Высокое качество материала',
+			'Современное оборудование',
+			'Обеспечиваем точность геометрии'
+		]
+	},
+	'Изготовление пресс-форм, штампов, приспособлений и др.': {
+		title: 'Изготовление пресс-форм, штампов, приспособлений и др.',
+		image: './images/projects/11.jpg',
+		description:
+			'Обладая обширным опытом и современным оборудованием, мы успешно производим пресс-формы, штампы и приспособления любой сложности.',
+		features: [
+			'Мы внимательно относимся к каждому заказу, предлагая индивидуальные решения, оптимально соответствующие вашим производственным потребностям',
+			'Используем передовое оборудование и технологии ЧПУ, что позволяет нам добиваться максимальной эффективности производства и минимизировать сроки выполнения заказов',
+			'Мы стремимся к долгосрочным отношениям с нашими клиентами, предлагая не только качественную продукцию, но и надежную техническую поддержку и консультации'
+		]
+	},
 
-    'Изготовление деревянной тары': {
-        title: 'Изготовление деревянной тары',
-        image: './images/projects/3.jpg',
-        description: 'Мы производим надежную деревянную тару любого размера - от компактных ящиков до крупногабаритной упаковочной тары. Каждое изделие создается с учетом особенностей вашего груза и требований к транспортировке',
-        features: [
-            'Полный цикл производства - от распила до сборки',
-            'Использование качественной древесины',
-            'Выполним любые объемы - от единичных ящиков до крупных партий',
-        ]
-    },
-
-    'Изготовление изделий из МДФ': {
-        title: 'Изготовление изделий из МДФ',
-        image: './images/worked/МДФ3.jpg',
-        description: 'Мы готовы предложить вам услуги по изготовлению технологической оснастки из МДФ для различных отраслей. Используем современные станки с ЧПУ для гарантии качества каждого изделия',
-        features: [
-            'Высокое качество материала',
-            'Современное оборудование',
-            'Обеспечиваем точность геометрии',
-        ]
-    },
-
-    'Разработка конструкторской документации': {
-        title: 'Разработка конструкторской документации',
-        image: './images/worked/photo_2026-02-13_11-52-37.jpg',
-        description: 'От технического задания до готовых чертежей. Создадим полный пакет конструкторской документации для ваших проектов',
-        features: [
-            'Работаем с любыми отраслями промышленности',
-            'Учитываем все ваши требования и пожелания, создавая конструкторскую документацию',
-        ]
-    },
-
-    'Изготовление пресс-форм, штампов, приспособлений и др.': {
-        title: 'Изготовление пресс-форм, штампов, приспособлений и др.',
-        image: './images2/11.jpg',
-        description: 'Обладая обширным опытом и современным оборудованием, мы успешно производим пресс-формы, штампы и приспособления любой сложности.',
-        features: [
-            'Мы внимательно относимся к каждому заказу, предлагая индивидуальные решения, оптимально соответствующие вашим производственным потребностям',
-            'Используем передовое оборудование и технологии ЧПУ, что позволяет нам добиваться максимальной эффективности производства и минимизировать сроки выполнения заказов',
-            'Мы стремимся к долгосрочным отношениям с нашими клиентами, предлагая не только качественную продукцию, но и надежную техническую поддержку и консультации'
-        ]
-    },
-};
+	'Разработка конструкторской документации': {
+		title: 'Разработка конструкторской документации',
+		image: './images/worked/photo_2026-02-13_11-52-37.jpg',
+		description:
+			'От технического задания до готовых чертежей. Создадим полный пакет конструкторской документации для ваших проектов',
+		features: [
+			'Работаем с любыми отраслями промышленности',
+			'Учитываем все ваши требования и пожелания, создавая конструкторскую документацию'
+		]
+	}
+}
 
 // Инициализация модальных окон
-document.addEventListener('DOMContentLoaded', function() {
-    initModals();
-});
+document.addEventListener('DOMContentLoaded', function () {
+	initModals()
+})
 
 function initModals() {
-    // Создаем HTML для модального окна
-    const modalHTML = `
+	// Создаем HTML для модального окна
+	const modalHTML = `
         <div id="serviceModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -161,146 +170,146 @@ function initModals() {
                 </div>
             </div>
         </div>
-    `;
+    `
 
-    // Добавляем модальное окно в body
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
+	// Добавляем модальное окно в body
+	document.body.insertAdjacentHTML('beforeend', modalHTML)
 
-    // Назначаем обработчики событий для карточек
-    const serviceCards = document.querySelectorAll('.service-card');
-    
-    serviceCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Проверяем, не был ли клик по кнопке прокрутки
-            if (!e.target.closest('.scroll-btn')) {
-                const title = this.querySelector('h3').textContent;
-                openModal(title);
-            }
-        });
+	// Назначаем обработчики событий для карточек
+	const serviceCards = document.querySelectorAll('.service-card')
 
-        // Добавляем эффект при наведении
-        card.style.cursor = 'pointer';
-        card.style.transition = 'all 0.3s ease';
-        
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-            this.style.boxShadow = '0 10px 30px rgba(0, 89, 164, 0.3)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '';
-        });
-    });
+	serviceCards.forEach(card => {
+		card.addEventListener('click', function (e) {
+			// Проверяем, не был ли клик по кнопке прокрутки
+			if (!e.target.closest('.scroll-btn')) {
+				const title = this.querySelector('h3').textContent
+				openModal(title)
+			}
+		})
 
-    // Обработчики для модального окна
-    const modal = document.getElementById('serviceModal');
-    const closeBtn = document.querySelector('.close-modal');
-    const modalContent = modal.querySelector('.modal-content');
+		// Добавляем эффект при наведении
+		card.style.cursor = 'pointer'
+		card.style.transition = 'all 0.3s ease'
 
-    // Закрытие по крестику
-    closeBtn.addEventListener('click', closeModal);
+		card.addEventListener('mouseenter', function () {
+			this.style.transform = 'translateY(-5px)'
+			this.style.boxShadow = '0 10px 30px rgba(0, 89, 164, 0.3)'
+		})
 
-    // Закрытие по клику вне окна
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+		card.addEventListener('mouseleave', function () {
+			this.style.transform = 'translateY(0)'
+			this.style.boxShadow = ''
+		})
+	})
 
-    // Закрытие по ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
-            closeModal();
-        }
-    });
+	// Обработчики для модального окна
+	const modal = document.getElementById('serviceModal')
+	const closeBtn = document.querySelector('.close-modal')
+	const modalContent = modal.querySelector('.modal-content')
 
-    // Предотвращение закрытия при клике на контент
-    modalContent.addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
+	// Закрытие по крестику
+	closeBtn.addEventListener('click', closeModal)
+
+	// Закрытие по клику вне окна
+	modal.addEventListener('click', function (e) {
+		if (e.target === modal) {
+			closeModal()
+		}
+	})
+
+	// Закрытие по ESC
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape' && modal.style.display === 'block') {
+			closeModal()
+		}
+	})
+
+	// Предотвращение закрытия при клике на контент
+	modalContent.addEventListener('click', function (e) {
+		e.stopPropagation()
+	})
 }
 
 function openModal(serviceName) {
-    const modal = document.getElementById('serviceModal');
-    const data = modalData[serviceName];
+	const modal = document.getElementById('serviceModal')
+	const data = modalData[serviceName]
 
-    if (!data) {
-        console.warn(`No data found for service: ${serviceName}`);
-        return;
-    }
+	if (!data) {
+		console.warn(`No data found for service: ${serviceName}`)
+		return
+	}
 
-    // Заполняем модальное окно данными
-    document.getElementById('modalTitle').textContent = data.title;
-    document.getElementById('modalImage').src = data.image;
-    document.getElementById('modalImage').alt = data.title;
-    
-    // Специальная обработка для изображения глубокого сверления
-    if (data.title === "Глубокое сверление") {
-        document.getElementById('modalImage').style.objectFit = 'cover';
-        document.getElementById('modalImage').style.objectPosition = 'top';
-    } else {
-        document.getElementById('modalImage').style.objectFit = '';
-        document.getElementById('modalImage').style.objectPosition = '';
-    }
-    
-    document.getElementById('modalDescription').textContent = data.description;
+	// Заполняем модальное окно данными
+	document.getElementById('modalTitle').textContent = data.title
+	document.getElementById('modalImage').src = data.image
+	document.getElementById('modalImage').alt = data.title
 
-    // Заполняем список преимуществ
-    const featuresList = document.getElementById('modalFeatures');
-    featuresList.innerHTML = '';
-    data.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.textContent = feature;
-        featuresList.appendChild(li);
-    });
+	// Специальная обработка для изображения глубокого сверления
+	if (data.title === 'Глубокое сверление') {
+		document.getElementById('modalImage').style.objectFit = 'cover'
+		document.getElementById('modalImage').style.objectPosition = 'top'
+	} else {
+		document.getElementById('modalImage').style.objectFit = ''
+		document.getElementById('modalImage').style.objectPosition = ''
+	}
 
-    // Показываем модальное окно
-    modal.style.display = 'block';
-    document.body.classList.add('modal-open');
-    
-    // Сбрасываем скролл на верх
-    modal.querySelector('.modal-body').scrollTop = 0;
+	document.getElementById('modalDescription').textContent = data.description
 
-    // Добавляем класс для анимации
-    setTimeout(() => {
-        modal.classList.add('show');
-    }, 10);
+	// Заполняем список преимуществ
+	const featuresList = document.getElementById('modalFeatures')
+	featuresList.innerHTML = ''
+	data.features.forEach(feature => {
+		const li = document.createElement('li')
+		li.textContent = feature
+		featuresList.appendChild(li)
+	})
+
+	// Показываем модальное окно
+	modal.style.display = 'block'
+	document.body.classList.add('modal-open')
+
+	// Сбрасываем скролл на верх
+	modal.querySelector('.modal-body').scrollTop = 0
+
+	// Добавляем класс для анимации
+	setTimeout(() => {
+		modal.classList.add('show')
+	}, 10)
 }
 
 function closeModal() {
-    const modal = document.getElementById('serviceModal');
-    
-    // Убираем класс для анимации
-    modal.classList.remove('show');
-    
-    // Ждем завершения анимации и скрываем модальное окно
-    setTimeout(() => {
-        modal.style.display = 'none';
-        document.body.classList.remove('modal-open');
-    }, 300);
+	const modal = document.getElementById('serviceModal')
+
+	// Убираем класс для анимации
+	modal.classList.remove('show')
+
+	// Ждем завершения анимации и скрываем модальное окно
+	setTimeout(() => {
+		modal.style.display = 'none'
+		document.body.classList.remove('modal-open')
+	}, 300)
 }
 
 // Функция для обновления данных
 function updateModalData(newData) {
-    Object.assign(modalData, newData);
+	Object.assign(modalData, newData)
 }
 
 // Автоматическая подгонка высоты изображения для мобильных
 function optimizeModalForMobile() {
-    const modalImage = document.getElementById('modalImage');
-    if (window.innerWidth <= 768 && modalImage) {
-        modalImage.style.maxHeight = '200px';
-        modalImage.style.objectPosition = 'center center';
-    }
+	const modalImage = document.getElementById('modalImage')
+	if (window.innerWidth <= 768 && modalImage) {
+		modalImage.style.maxHeight = '200px'
+		modalImage.style.objectPosition = 'center center'
+	}
 }
 
 // Слушаем изменения размера окна
-window.addEventListener('resize', optimizeModalForMobile);
+window.addEventListener('resize', optimizeModalForMobile)
 
 // Экспорт функций для использования в других скриптах
 window.ModalManager = {
-    openModal,
-    closeModal,
-    updateModalData
-};
+	openModal,
+	closeModal,
+	updateModalData
+}
